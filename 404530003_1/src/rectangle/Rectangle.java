@@ -5,14 +5,17 @@
 所以如果是我的話, 會建議將計算與印出來的字串分開寫.
 2.public是一個很開放性的修飾字, 若你想寫出比較精準的程式碼, 或許可以查查看public、protected、private與不寫之間的差異, 若全部都設定成public的確很好用
 但如果今天開發的是一個比較有資安性的程式, 這樣會安全嗎?
-3.你寫的很好.
+3.請記得加上無參數建構子, 這是一個習慣, 以避免程式產生錯誤, 你可以嘗試加上 RectangleTester Rec0 = new RectangleTester(); 無參數建構子可以透過this(-1,-1,-1,-1);去呼叫有參數的建構子以達成初始化物件, 提供給你參考.
+4.你寫的很好.
 */
+
 package rectangle;
 
 public class Rectangle 
 {
 	public static void main(String[] args) 
 	{
+			RectangleTester Rec0 = new RectangleTester();
             RectangleTester Rec1 = new RectangleTester(18,57,15,25);
             RectangleTester Rec2 = new RectangleTester(47,60,0,12);
             System.out.println(Rec1.toString()+"\n"+"Area = "+Rec1.getWidth()*Rec1.getHeight()+"\n"+"perimeter = "+2*(Rec1.getWidth()+Rec1.getHeight())+"\n\n"+
